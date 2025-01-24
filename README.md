@@ -62,12 +62,12 @@ cd aicodereviewer
 Run the AI Code Reviewer using the following command:
 
 ```bash
-java -jar aicodereviewer.jar <filename_to_review>
+java -jar dli-0.0.1-SNAPSHOT.jar <filename_to_review>
 ```
 
 Replace `<filename_to_review>` with the path to the file you want to review. For example:
 ```bash
-java -jar aicodereviewer.jar src/MyCodeFile.java
+java -jar dli-0.0.1-SNAPSHOT.jar src/MyCodeFile.java
 ```
 
 ---
