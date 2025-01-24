@@ -1,6 +1,6 @@
 # AI Code Reviewer README
 
-Welcome to the **AI Code Reviewer** repository! This project provides an AI-powered tool for reviewing code files and providing actionable feedback to improve quality, readability, and adherence to best practices.
+Welcome to the **AI Code Reviewer** repository! This project provides an AI-powered tool for reviewing code files and providing actionable feedback to fix bugs, improve application speed, and fix security problems.
 
 ---
 
