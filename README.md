@@ -1,5 +1,12 @@
 # AI Code Reviewer README
 
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=larrydiamond_AICodeReviewer&metric=bugs)](https://sonarcloud.io/summary/new_code?id=larrydiamond_AICodeReviewer)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=larrydiamond_AICodeReviewer&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=larrydiamond_AICodeReviewer)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=larrydiamond_AICodeReviewer&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=larrydiamond_AICodeReviewer)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=larrydiamond_AICodeReviewer&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=larrydiamond_AICodeReviewer)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=larrydiamond_AICodeReviewer&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=larrydiamond_AICodeReviewer)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=larrydiamond_AICodeReviewer&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=larrydiamond_AICodeReviewer)
+
 Welcome to the **AI Code Reviewer** repository! This project provides an AI-powered tool for reviewing code files and providing actionable feedback to fix bugs, improve application speed, and fix security problems.
 
 ---
