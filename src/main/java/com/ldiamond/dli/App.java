@@ -132,7 +132,7 @@ public class App implements ApplicationRunner {
     }
 
     public String userMessageOnly(final SimpleOpenAI openAI, final String model, final String userMessage) {
-        final long startTime = System.currentTimeMillis();
+//        final long startTime = System.currentTimeMillis();
         final ChatRequest chatRequest = ChatRequest.builder()
             .model(model)
             .message(UserMessage.of(userMessage))
@@ -141,13 +141,13 @@ public class App implements ApplicationRunner {
             .build();
         final CompletableFuture<Chat> futureChat = openAI.chatCompletions().create(chatRequest);
         final Chat chatResponse = futureChat.join();
-        final long stopTime = System.currentTimeMillis();
+//        final long stopTime = System.currentTimeMillis();
 //        log.info(model + " userMessageOnly took " +  (stopTime - startTime) + " ms");
         return chatResponse.firstContent();
     }
 
     public String systemUserMessage (final SimpleOpenAI openAI, final String model, final String systemMessage, final String userMessage) {
-        final long startTime = System.currentTimeMillis();
+//        final long startTime = System.currentTimeMillis();
         final ChatRequest chatRequest = ChatRequest.builder()
             .model(model)
             .message(SystemMessage.of(systemMessage))
@@ -157,14 +157,14 @@ public class App implements ApplicationRunner {
             .build();
         final CompletableFuture<Chat> futureChat = openAI.chatCompletions().create(chatRequest);
         final Chat chatResponse = futureChat.join();
-        final long stopTime = System.currentTimeMillis();
+//        final long stopTime = System.currentTimeMillis();
 //        log.info(model + " userMessageOnly took " +  (stopTime - startTime) + " ms");
         return chatResponse.firstContent();
     }
 
     public String userImage (final SimpleOpenAI openAI, final String model, final String userMessage, final String imageFileName) {
         try {
-            final long startTime = System.currentTimeMillis();
+//            final long startTime = System.currentTimeMillis();
             final ChatRequest chatRequest = ChatRequest.builder()
                 .model(model)
                 .messages(List.of(
@@ -177,7 +177,7 @@ public class App implements ApplicationRunner {
                 .build();
             final CompletableFuture<Chat> futureChat = openAI.chatCompletions().create(chatRequest);
             final Chat chatResponse = futureChat.join();
-            final long stopTime = System.currentTimeMillis();
+//            final long stopTime = System.currentTimeMillis();
 //            log.info(model + " userImage took " +  (stopTime - startTime) + " ms");
             return chatResponse.firstContent();
         } catch (Exception e) {
@@ -189,7 +189,7 @@ public class App implements ApplicationRunner {
 
     public String userTextAttachment (final SimpleOpenAI openAI, final String model, final String systemMessage, final String userMessage, final String textAttachment) {
         try {
-            final long startTime = System.currentTimeMillis();
+//            final long startTime = System.currentTimeMillis();
             final ChatRequest chatRequest = ChatRequest.builder()
                 .model(model)
                 .messages(List.of(
@@ -202,7 +202,7 @@ public class App implements ApplicationRunner {
                 .build();
             final CompletableFuture<Chat> futureChat = openAI.chatCompletions().create(chatRequest);
             final Chat chatResponse = futureChat.join();
-            final long stopTime = System.currentTimeMillis();
+//            final long stopTime = System.currentTimeMillis();
 //            log.info(model + " userTextAttachment took " +  (stopTime - startTime) + " ms");
             return chatResponse.firstContent();
         } catch (Exception e) {
@@ -214,7 +214,7 @@ public class App implements ApplicationRunner {
 
     public String userSystemImage (final SimpleOpenAI openAI, final String model, final String userMessage, final String systemMessage, final String imageFileName) {
         try {
-            final long startTime = System.currentTimeMillis();
+//            final long startTime = System.currentTimeMillis();
             final ChatRequest chatRequest = ChatRequest.builder()
                 .model(model)
                 .message(SystemMessage.of(systemMessage))  
@@ -228,7 +228,7 @@ public class App implements ApplicationRunner {
                 .build();
             final CompletableFuture<Chat> futureChat = openAI.chatCompletions().create(chatRequest);
             final Chat chatResponse = futureChat.join();
-            final long stopTime = System.currentTimeMillis();
+//            final long stopTime = System.currentTimeMillis();
 //            log.info(model + " userSystemImage took " +  (stopTime - startTime) + " ms");
             return chatResponse.firstContent();
         } catch (Exception e) {
