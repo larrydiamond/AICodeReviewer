@@ -87,6 +87,7 @@ public class App implements ApplicationRunner {
         }
         // So did one model hallucinate?  If they did then that hallucination is probably not the most common answer.  
         // performance enhancement for the future - call the different models at the same time in different threads
+        // https://en.wikipedia.org/wiki/Hamming_code used for LLMs
         log.info ("Most common answer to " + classifierRequest + " was " + mostCommonAnswer + " with count = " + mostCommonCount);
 
         List<String> codingModels = new ArrayList<>();
@@ -112,6 +113,7 @@ public class App implements ApplicationRunner {
             }
 
             if (responses.size() > 1) {
+                // LLM as a judge https://huggingface.co/learn/cookbook/en/llm_judge
                 StringBuilder sb = new StringBuilder();
                 sb.append("Different coders rewrote the class below to remove bugs, security problems, and performance problems.  Please return only the choice name of the choice that performed best: ");
                 for (Map.Entry<String,String> entry : responses.entrySet()) {
