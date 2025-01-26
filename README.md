@@ -19,7 +19,7 @@ Welcome to the **AI Code Reviewer** repository! This project provides an AI-powe
 ---
 
 ## Demo
-- [![Fix Calculate Circumference](https://youtu.be/gjapO5D0guk)
+- Fix Calculate Circumference - https://youtu.be/gjapO5D0guk
 
 ---
 
