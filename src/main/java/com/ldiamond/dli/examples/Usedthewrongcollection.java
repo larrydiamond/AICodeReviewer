@@ -1,4 +1,10 @@
-public class usedthewrongcollection {
+package com.ldiamond.dli.examples;
+
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class Usedthewrongcollection {
     public String findMostCommonString (final Set<String> strings) {
         Map<String, Integer> counts = new TreeMap<>();
         for (String s : strings) {

@@ -1,4 +1,8 @@
-public class previousreference {
+package com.ldiamond.dli.examples;
+
+import java.util.List;
+
+public class Previousreference {
     public String findPreviousReference (final String reference, final List<String> strings) {
         String previousReference = null;
         int offset = strings.indexOf(reference);
