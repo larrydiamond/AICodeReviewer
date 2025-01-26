@@ -122,9 +122,30 @@ public class App implements ApplicationRunner {
 
                 String aggResponse = systemUserMessage(openAI, gemma2, codeReviewSystemMessage, sb.toString()).trim();
                 log.info(filePath.toString() + " AggResponse = " + aggResponse);
-                log.info(filePath.toString() + " Response was " + responses.get(aggResponse));
+
+                String bestResponse = responses.get(aggResponse);
+                if (bestResponse != null) {
+                    log.info(filePath.toString() + " Best response was " + bestResponse);
+                } else {
+                    int earliest = Integer.MAX_VALUE;
+                    String earliestName = "";
+                    for (Map.Entry<String,String> entry : responses.entrySet()) {
+                        int responseOffset = aggResponse.indexOf(entry.getKey());
+                        if (responseOffset != -1) {
+                            if (responseOffset < earliest) {
+                                earliest = responseOffset;
+                                earliestName = entry.getKey();
+                            }
+                        }
+                    }
+                    log.info(filePath.toString() + " Best response was " + responses.get(earliestName));
+                }
             } else {
-                log.info (filePath.toString() + " no coding recommendations");
+                if (responses.size() == 1) {
+                    log.info(filePath.toString() + " Only response was " + responses.values().iterator().next());
+                } else {
+                    log.info (filePath.toString() + " no coding recommendations");
+                }
             }
 
         } else {
