@@ -18,8 +18,14 @@ Welcome to the **AI Code Reviewer** repository! This project provides an AI-powe
 
 ---
 
-## Demo
+## Demos
 - Fix Calculate Circumference - https://youtu.be/gjapO5D0guk
+- Fix copy and paste bug - https://youtu.be/YdeEu7ofzV4
+
+---
+
+## Examples
+Please look in com\ldiamond\dli\examples for example code and output
 
 ---
 
