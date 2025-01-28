@@ -46,7 +46,8 @@ public class App implements ApplicationRunner {
     // Coding models
     static final String QWEN25CODER = "qwen2.5-coder";
     static final String FALCON3 = "falcon3";
-
+    static final String DEEPSEEKR1 = "deepseek-r1";
+    
     @Override
     public void run(ApplicationArguments args) throws Exception {
         log.info("ApplicationRunner: " + args.getOptionNames());
@@ -94,6 +95,7 @@ public class App implements ApplicationRunner {
         codingModels.add(QWEN25CODER);
         codingModels.add(FALCON3);
         codingModels.add(gemma2);
+//        codingModels.add(DEEPSEEKR1);
 
         Path filePath = Paths.get(args.getNonOptionArgs().get(0));
         if (Files.isRegularFile(filePath)) {
@@ -128,7 +130,7 @@ public class App implements ApplicationRunner {
                     log.info(filePath.toString() + " Best response was " + bestResponse);
                 } else {
                     int earliest = Integer.MAX_VALUE;
-                    String earliestName = "";
+                    String earliestName = responses.keySet().iterator().next();
                     for (Map.Entry<String,String> entry : responses.entrySet()) {
                         int responseOffset = aggResponse.indexOf(entry.getKey());
                         if (responseOffset != -1) {
