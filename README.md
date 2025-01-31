@@ -29,6 +29,9 @@ Welcome to the **AI Code Reviewer** repository! This project provides an AI-powe
 [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Usedthewrongcollection.output)
 - Buggy algorithm [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Previousreference.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Previousreference.output)
 - Inefficient String concatenation [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Inefficientstringconcatenation.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Inefficientstringconcatenation.output)
+- Hardcoded constant instead of PI [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Circumference.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Circumference.output)
+- Swapped fields in constructor [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/BookStoreProduct.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/BookStoreProduct.output)
+- Copy paste bug in constructor [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/PetStoreProduct.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/PetStoreProduct.output)
 
 
 ---
