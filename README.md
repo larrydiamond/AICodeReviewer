@@ -25,7 +25,8 @@ Welcome to the **AI Code Reviewer** repository! This project provides an AI-powe
 ---
 
 ## Examples
-Please look in com\ldiamond\dli\examples for example code and output
+[Used the wrong collection java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Usedthewrongcollection.java)
+[Used the wrong collection output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Usedthewrongcollection.output)
 
 ---
 
