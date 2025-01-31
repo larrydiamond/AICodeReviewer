@@ -28,6 +28,8 @@ Welcome to the **AI Code Reviewer** repository! This project provides an AI-powe
 - Used the wrong collection [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Usedthewrongcollection.java)
 [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Usedthewrongcollection.output)
 - Buggy algorithm [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Previousreference.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Previousreference.output)
+- Inefficient String concatenation [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Inefficientstringconcatenation.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Inefficientstringconcatenation.output)
+
 
 ---
 
