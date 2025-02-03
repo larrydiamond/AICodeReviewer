@@ -1,0 +1,26 @@
+{
+    "servers": [
+      {
+        "name": "ollama",
+        "apiKey": "ollama",
+        "organizationId": "ollama",
+        "projectId": "ollama",
+        "baseUrl": "http://localhost:11434"
+      }
+    ],
+    "models": [
+      {
+        "modelName": "gemma2",
+        "serverName": "ollama"
+      },
+      {
+        "modelName": "qwen2.5-coder",
+        "serverName": "ollama"
+      },
+      {
+        "modelName": "falcon3",
+        "serverName": "ollama"
+      }
+    ],
+    "judgemodel": "gemma2"
+  }

@@ -1,6 +1,7 @@
 package com.ldiamond.dli;
 
 import java.io.IOException;
+import java.io.File;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -23,7 +24,10 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import io.github.sashirestela.openai.SimpleOpenAI;
+import io.github.sashirestela.openai.SimpleOpenAI.SimpleOpenAIBuilder;
 import io.github.sashirestela.openai.common.content.ContentPart.ContentPartImageUrl;
 import io.github.sashirestela.openai.common.content.ContentPart.ContentPartImageUrl.ImageUrl;
 import io.github.sashirestela.openai.common.content.ContentPart.ContentPartText;
@@ -38,66 +42,50 @@ import io.github.sashirestela.openai.support.Base64Util.MediaType;
 @Log
 @Component
 public class App implements ApplicationRunner {
-    // Text only models
-    static final String gemma2 = "gemma2";
-    static final String llama3 = "llama3.1";
-    static final String llama32 = "llama3.2";
-
-    // Coding models
-    static final String QWEN25CODER = "qwen2.5-coder";
-    static final String FALCON3 = "falcon3";
-    static final String DEEPSEEKR1 = "deepseek-r1";
     
     @Override
     public void run(ApplicationArguments args) throws Exception {
         log.info("ApplicationRunner: " + args.getOptionNames());
 
-        final SimpleOpenAI openAI = SimpleOpenAI.builder()
-            .apiKey("ollama")
-            .organizationId("ollama")
-            .projectId("ollama")
-            .baseUrl("http://localhost:11434")
-            .build();
+        Config config = null;
+		ObjectMapper objectMapper = new ObjectMapper();
+		
+		try {
+			config = objectMapper.readValue(new File(args.getNonOptionArgs().get(0)), Config.class);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
 
+		if (config == null) {
+			System.out.println ("Configuration required");
+            return;
+		}
 
-        List<String> textModels = new ArrayList<>();
-        textModels.add(gemma2);
-        textModels.add(llama3);
-        textModels.add(llama32);
+        Map<String,SimpleOpenAI> servers = new HashMap<>();
+        for (Server openaiServer : config.getServers()) {
+            SimpleOpenAIBuilder builder = SimpleOpenAI.builder();
+            if (openaiServer.getApiKey() != null)
+                builder.apiKey(openaiServer.getApiKey());
+
+            if (openaiServer.getOrganizationId() != null)
+                builder.organizationId(openaiServer.getOrganizationId());
+
+            if (openaiServer.getProjectId() != null)
+                builder.projectId(openaiServer.getProjectId());
+
+            if (openaiServer.getBaseUrl() != null)
+                builder.baseUrl(openaiServer.getBaseUrl());
+
+            SimpleOpenAI openAI = builder.build();
+            servers.put(openaiServer.getName(), openAI);
+        }
         
-        final String classifierRequest = "Is a tree most like a plant, an animal, or a car? Please tell me just the one word answer with no punctuation";
-        Map<String,Integer> classifierResults = new HashMap<>();
-        for (String model : textModels) {
-            String answer = userMessageOnly(openAI, model, classifierRequest).trim();
-//            log.info ("Classifier " + model + " = " + answer);
-            Integer count = classifierResults.get(answer);
-            if (count == null) {
-                classifierResults.put(answer, 1);
-            } else {
-                classifierResults.put(answer, count + 1);
-            }
+        Map<String,Model> models = new HashMap<>();
+        for (Model modelConfiguration : config.getModels()) {
+            models.put(modelConfiguration.getModelName(), modelConfiguration);
         }
 
-        int mostCommonCount = 0;
-        String mostCommonAnswer = "";
-        for (Entry<String,Integer> entry : classifierResults.entrySet()) {
-            if (entry.getValue() > mostCommonCount) {
-                mostCommonCount = entry.getValue();
-                mostCommonAnswer = entry.getKey();
-            }
-        }
-        // So did one model hallucinate?  If they did then that hallucination is probably not the most common answer.  
-        // performance enhancement for the future - call the different models at the same time in different threads
-        // https://en.wikipedia.org/wiki/Hamming_code used for LLMs
-        log.info ("Most common answer to " + classifierRequest + " was " + mostCommonAnswer + " with count = " + mostCommonCount);
-
-        List<String> codingModels = new ArrayList<>();
-        codingModels.add(QWEN25CODER);
-        codingModels.add(FALCON3);
-        codingModels.add(gemma2);
-//        codingModels.add(DEEPSEEKR1);
-
-        Path filePath = Paths.get(args.getNonOptionArgs().get(0));
+        Path filePath = Paths.get(args.getNonOptionArgs().get(1));
         if (Files.isRegularFile(filePath)) {
             List<String> thisFile = Files.readAllLines(filePath);
             String contents = String.join("\n", thisFile);
@@ -106,7 +94,9 @@ public class App implements ApplicationRunner {
             String codeReviewUserMessagePrefix = "Please rewrite this class to fix bugs, security problems, and performance problems in this code.   If there are no problems then just reply with 'no problem'. ";
 
             Map<String,String> responses = new HashMap<>();
-            for (String model : codingModels) {
+            for (Map.Entry<String,Model> modelEntry : models.entrySet()) {
+                String model = modelEntry.getKey();
+                SimpleOpenAI openAI = servers.get(modelEntry.getValue().getServerName());
                 String response = systemUserMessage(openAI, model, codeReviewSystemMessage, codeReviewUserMessagePrefix + contents);
                 if ((response != null) && (response.length() > 20) && (!response.startsWith("No problem"))) {
                     responses.put(model, response);
@@ -122,7 +112,8 @@ public class App implements ApplicationRunner {
                     sb.append(" Choice name is " + entry.getKey() + " text is ''' " + entry.getValue() + " ''' , ");
                 }
 
-                String aggResponse = systemUserMessage(openAI, gemma2, codeReviewSystemMessage, sb.toString()).trim();
+                SimpleOpenAI openAI = servers.get(models.get(config.getJudgemodel()).getServerName());
+                String aggResponse = systemUserMessage(openAI, config.getJudgemodel(), codeReviewSystemMessage, sb.toString()).trim();
                 log.info(filePath.toString() + " AggResponse = " + aggResponse);
 
                 String bestResponse = responses.get(aggResponse);
