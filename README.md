@@ -90,7 +90,9 @@ Run the AI Code Reviewer using the following command:
 java -jar dli-0.1.0-SNAPSHOT.jar <path_to_config> <filename_to_review>
 ```
 
-Replace `<filename_to_review>` with the path to the file you want to review. For example:
+Replace `<path_to_config>` with the path to the config file that lists your servers and models, and 
+Replace `<filename_to_review>` with the path to the file you want to review. 
+For example:
 ```bash
 java -jar dli-0.1.0-SNAPSHOT.jar src/main/resources/config.json src/MyCodeFile.java
 ```
