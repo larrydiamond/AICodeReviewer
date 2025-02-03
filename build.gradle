@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.4.0'
-	id 'io.spring.dependency-management' version '1.1.6'
+	id 'org.springframework.boot' version '3.4.2'
+	id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.ldiamond'
@@ -25,8 +25,8 @@ repositories {
 
 dependencies {
     implementation 'io.github.sashirestela:simple-openai:3.17.2'
-	implementation 'org.apache.pdfbox:pdfbox:3.0.3'
-	implementation 'org.apache.pdfbox:pdfbox-tools:3.0.3'
+	implementation 'org.apache.pdfbox:pdfbox:3.0.4'
+	implementation 'org.apache.pdfbox:pdfbox-tools:3.0.4'
 
 	implementation 'org.springframework.boot:spring-boot-starter'
 	compileOnly 'org.projectlombok:lombok'
