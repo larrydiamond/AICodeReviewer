@@ -35,11 +35,12 @@ import io.github.sashirestela.openai.domain.chat.Chat;
 import io.github.sashirestela.openai.domain.chat.ChatMessage.SystemMessage;
 import io.github.sashirestela.openai.domain.chat.ChatMessage.UserMessage;
 import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import io.github.sashirestela.openai.domain.chat.ChatRequest;
 import io.github.sashirestela.openai.support.Base64Util;
 import io.github.sashirestela.openai.support.Base64Util.MediaType;
 
-@Log
+@Slf4j
 @Component
 public class App implements ApplicationRunner {
     
@@ -198,7 +199,7 @@ public class App implements ApplicationRunner {
             return chatResponse.firstContent();
         } catch (Exception e) {
             e.printStackTrace();
-            log.severe("Could not userImage for model " + model);
+            log.error("Could not userImage for model " + model);
             return "";
         }
     }
@@ -223,7 +224,7 @@ public class App implements ApplicationRunner {
             return chatResponse.firstContent();
         } catch (Exception e) {
             e.printStackTrace();
-            log.severe("Could not userTextAttachment for model " + model);
+            log.error("Could not userTextAttachment for model " + model);
             return "";
         }
     }
@@ -249,7 +250,7 @@ public class App implements ApplicationRunner {
             return chatResponse.firstContent();
         } catch (Exception e) {
             e.printStackTrace();
-            log.severe("Could not userSystemImage for model " + model);
+            log.error("Could not userSystemImage for model " + model);
             return "";
         }
     }
