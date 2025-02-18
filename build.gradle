@@ -32,6 +32,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	implementation 'com.github.javaparser:javaparser-parent:3.26.3'
+	implementation 'com.github.javaparser:javaparser-symbol-solver-core:3.26.3'
+	implementation 'com.github.javaparser:javaparser-core:3.26.3'
+	implementation 'com.github.javaparser:javaparser-core-serialization:3.26.3'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	testImplementation 'com.ldiamond:architectureunittests:2.0.0'

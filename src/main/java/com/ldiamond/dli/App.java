@@ -25,6 +25,10 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.javaparser.StaticJavaParser;
+import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
+import com.github.javaparser.ast.body.ConstructorDeclaration;
+import com.github.javaparser.ast.body.MethodDeclaration;
 
 import io.github.sashirestela.openai.SimpleOpenAI;
 import io.github.sashirestela.openai.SimpleOpenAI.SimpleOpenAIBuilder;
@@ -34,7 +38,6 @@ import io.github.sashirestela.openai.common.content.ContentPart.ContentPartText;
 import io.github.sashirestela.openai.domain.chat.Chat;
 import io.github.sashirestela.openai.domain.chat.ChatMessage.SystemMessage;
 import io.github.sashirestela.openai.domain.chat.ChatMessage.UserMessage;
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import io.github.sashirestela.openai.domain.chat.ChatRequest;
 import io.github.sashirestela.openai.support.Base64Util;
@@ -93,7 +96,55 @@ public class App implements ApplicationRunner {
 
             String codeReviewSystemMessage = "You are a helpful code reviewer looking for bugs, security problems, and performance problems in source code";
             String codeReviewUserMessagePrefix = "Please rewrite this class to fix bugs, security problems, and performance problems in this code.   If there are no problems then just reply with 'no problem'. ";
+            String methodCodeReviewUserMessagePrefix = "Please rewrite this method to fix bugs, security problems, and performance problems in this code.   If there are no problems then just reply with 'no problem'. ";
+            String judgeModel = config.getJudgemodel();
 
+            com.github.javaparser.ast.CompilationUnit cu = StaticJavaParser.parse(contents);
+            List<ClassOrInterfaceDeclaration> classes = cu.findAll(ClassOrInterfaceDeclaration.class);
+            classes.forEach(c -> {
+                List<MethodDeclaration> methods = c.getMethods();
+                methods.forEach(md -> {
+                    log.info("Method name: " + md.getName());
+                    log.info("lines " + md.getRange().get().begin.line + " to " + md.getRange().get().end.line);
+                    if ((md.getRange().get().begin.line > 0) && (md.getRange().get().end.line > 0) && (md.getRange().get().begin.line < md.getRange().get().end.line)) {
+                        int startAt = md.getRange().get().begin.line - 1;
+                        int endAt = md.getRange().get().end.line - 1;
+                        log.info("Method body: ");
+                        StringBuilder sb = new StringBuilder();
+                        for (int i = startAt; i <= endAt; i++) {
+                            log.info(thisFile.get(i));
+                            sb.append(thisFile.get(i));
+                        }
+                        SimpleOpenAI openAI = servers.get(models.get(judgeModel).getServerName());
+                        String response = systemUserMessage(openAI, judgeModel, codeReviewSystemMessage, methodCodeReviewUserMessagePrefix + sb.toString());
+                        log.info ("method response = " + response);
+                    }
+                    log.info ("");
+                });
+            });
+            
+            classes.forEach(c -> {
+                List<ConstructorDeclaration> constructors = c.getConstructors();
+                constructors.forEach(md -> {
+                    log.info("Constructor name: " + md.getName());
+                    log.info("lines " + md.getRange().get().begin.line + " to " + md.getRange().get().end.line);
+                    if ((md.getRange().get().begin.line > 0) && (md.getRange().get().end.line > 0) && (md.getRange().get().begin.line < md.getRange().get().end.line)) {
+                        int startAt = md.getRange().get().begin.line - 1;
+                        int endAt = md.getRange().get().end.line - 1;
+                        log.info("Constructor body: ");
+                        StringBuilder sb = new StringBuilder();
+                        for (int i = startAt; i <= endAt; i++) {
+                            log.info(thisFile.get(i));
+                            sb.append(thisFile.get(i));
+                        }
+                        SimpleOpenAI openAI = servers.get(models.get(judgeModel).getServerName());
+                        String response = systemUserMessage(openAI, judgeModel, codeReviewSystemMessage, methodCodeReviewUserMessagePrefix + sb.toString());
+                        log.info ("Constructor response = " + response);
+                    }
+                    log.info ("");
+                });
+            });
+            
             Map<String,String> responses = new HashMap<>();
             for (Map.Entry<String,Model> modelEntry : models.entrySet()) {
                 String model = modelEntry.getKey();
