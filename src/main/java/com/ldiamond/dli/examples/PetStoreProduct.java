@@ -8,7 +8,7 @@ public class PetStoreProduct {
     public PetStoreProduct(String name, String description, String displayName) {
         this.name = name;
         this.description = description;
-        this.displayName = description;
+        this.displayName = displayName;
     }
 
     public String getName() {
