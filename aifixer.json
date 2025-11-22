@@ -16,5 +16,6 @@
         { "rule": "java:S1066", "description" : "Merge this if statement with the enclosing one" }, 
         { "rule": "java:S1643", "description" : "Strings should not be concatenated using plus in a loop" }
     ],
+    
     "aiderModel": "ollama_chat/qwen3-coder:30b"
 }
