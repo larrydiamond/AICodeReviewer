@@ -1,0 +1,20 @@
+{
+    "url": "https://sonarcloud.io",
+    "projectKey": "larrydiamond_AICodeReviewer",
+    "postCommands": [
+        ".\\gradlew.bat clean",
+        ".\\gradlew.bat build",
+        ".\\gradlew.bat test"
+    ],
+    "maximumIssuesFixedPerRun": 10,
+    "techDebtDetectionTool" : "SonarQube",
+    "techDebtRemediationTool" : "aider",
+    "sonarSafeRules": [
+        { "rule": "java:S106", "description" : "Replace Controller with RestController" }, 
+        { "rule": "java:S1172", "description" : "Remove this unused method parameter" }, 
+        { "rule": "java:S1481", "description" : "Remove this unused local variable" }, 
+        { "rule": "java:S1066", "description" : "Merge this if statement with the enclosing one" }, 
+        { "rule": "java:S1643", "description" : "Strings should not be concatenated using plus in a loop" }
+    ],
+    "aiderModel": "ollama_chat/qwen3-coder:30b"
+}
