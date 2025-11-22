@@ -2,11 +2,10 @@ package com.ldiamond.dli.examples;
 
 public class Inefficientstringconcatenation {
     public String inefficientStringConcatenation(final String whatToAppend, final int howManyTimes) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < howManyTimes; i++) {
-            result += whatToAppend;
+            result.append(whatToAppend);
         }
-        return result;
+        return result.toString();
     }        
 }
-
