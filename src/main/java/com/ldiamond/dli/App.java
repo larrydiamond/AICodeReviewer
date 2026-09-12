@@ -21,6 +21,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.pdfbox.tools.PDFText2HTML;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import io.github.sashirestela.openai.SimpleOpenAI;
@@ -37,6 +38,7 @@ import io.github.sashirestela.openai.support.Base64Util.MediaType;
 
 @Log
 @Component
+@Profile("!test")
 public class App implements ApplicationRunner {
     // Text only models
     static final String gemma2 = "gemma2";
