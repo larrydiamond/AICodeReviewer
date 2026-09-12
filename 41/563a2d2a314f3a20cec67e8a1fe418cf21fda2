@@ -1,0 +1,29 @@
+src/test/java/com/ldiamond/dli/DliApplicationTests.java
+  s_d9719f8e2f9eb2::t_1ae723d7cb0c78 5,8
+  s_d9719f8e2f9eb2::t_c0a33f3e0e30b6 11-13
+settings.gradle
+  s_d9719f8e2f9eb2::t_2c5a830168bef6 1-4
+build.gradle
+  s_d9719f8e2f9eb2::t_671d1e15b8e86e 27-29
+  s_d9719f8e2f9eb2::t_2da326433c4ba6 42-43
+  s_d9719f8e2f9eb2::t_d7549dff1c36b1 3-4
+src/main/java/com/ldiamond/dli/App.java
+  s_d9719f8e2f9eb2::t_6f17313d8afbb5 24
+  s_d9719f8e2f9eb2::t_c720c5cd3ce3ca 41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "41563a2d2a314f3a20cec67e8a1fe418cf21fda2",
+  "prompts": {},
+  "sessions": {
+    "s_d9719f8e2f9eb2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "52c5753c-25e7-45ff-a502-2b824c32e13a",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Larry Diamond <ldiamond@ldiamond.com>"
+    }
+  }
+}
