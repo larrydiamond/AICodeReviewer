@@ -97,7 +97,7 @@ Build the jar with the Gradle wrapper (no local Gradle install needed):
 ```bash
 ./gradlew build
 ```
-This produces `build/libs/dli-0.0.2-SNAPSHOT.jar`.
+This produces `build/libs/dli-0.1.0.jar`.
 
 ---
 
@@ -106,12 +106,12 @@ This produces `build/libs/dli-0.0.2-SNAPSHOT.jar`.
 Run the AI Code Reviewer using the following command:
 
 ```bash
-java -jar build/libs/dli-0.0.2-SNAPSHOT.jar <filename_to_review>
+java -jar build/libs/dli-0.1.0.jar <filename_to_review>
 ```
 
 Replace `<filename_to_review>` with the path to the file you want to review. For example:
 ```bash
-java -jar build/libs/dli-0.0.2-SNAPSHOT.jar src/MyCodeFile.java
+java -jar build/libs/dli-0.1.0.jar src/MyCodeFile.java
 ```
 
 ---
