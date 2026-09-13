@@ -25,13 +25,19 @@ Welcome to the **AI Code Reviewer** repository! This project provides an AI-powe
 ---
 
 ## Examples
-- Used the wrong collection [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Usedthewrongcollection.java)
-[output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Usedthewrongcollection.output)
-- Buggy algorithm [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Previousreference.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Previousreference.output)
-- Inefficient String concatenation [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Inefficientstringconcatenation.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Inefficientstringconcatenation.output)
-- Hardcoded constant instead of PI [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Circumference.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/Circumference.output)
-- Swapped fields in constructor [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/BookStoreProduct.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/BookStoreProduct.output)
-- Copy paste bug in constructor [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/PetStoreProduct.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/main/java/com/ldiamond/dli/examples/PetStoreProduct.output)
+Each example below is exercised by an automated integration test in
+[CodeReviewExamplesIT](src/test/java/com/ldiamond/dli/examples/CodeReviewExamplesIT.java), which sends the
+buggy source to a local Ollama model and asserts the review flags the known bug. Run them yourself with
+`./gradlew integrationTest` (requires Ollama running locally; excluded from the default `test` task since it
+makes live model calls).
+
+- Used the wrong collection [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Usedthewrongcollection.java)
+[output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Usedthewrongcollection.output)
+- Buggy algorithm [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Previousreference.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Previousreference.output)
+- Inefficient String concatenation [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Inefficientstringconcatenation.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Inefficientstringconcatenation.output)
+- Hardcoded constant instead of PI [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Circumference.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Circumference.output)
+- Swapped fields in constructor [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/BookStoreProduct.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/BookStoreProduct.output)
+- Copy paste bug in constructor [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/PetStoreProduct.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/PetStoreProduct.output)
 
 
 ---
