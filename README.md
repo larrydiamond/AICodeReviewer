@@ -45,11 +45,13 @@ makes live model calls).
 ## Requirements
 Before running the AI Code Reviewer, you need to install and set up the following dependencies:
 
-1. **Java**  
-   Ensure you have Java installed on your system. The tool requires Java to run the `.jar` file.
+1. **Java 17**  
+   The build is pinned to a Java 17 toolchain. The Gradle wrapper will auto-provision a JDK 17 if one
+   isn't already installed, but running the built `.jar` directly requires Java 17+ on your `PATH`.
 
-2. **Ollama**  
-   The AI Code Reviewer depends on **Ollama**, which needs to be installed locally.
+2. **Ollama, running locally**  
+   The AI Code Reviewer depends on **Ollama** being installed *and running* (`ollama serve`, or the
+   Ollama desktop app) at `http://localhost:11434` — that URL is hardcoded in the app.
 
 3. **AI Models**  
    Install the following AI models via Ollama:
@@ -63,11 +65,15 @@ Before running the AI Code Reviewer, you need to install and set up the followin
 
 ## Installation
 
-### 1. Install Java
+### 1. Install Java 17+
 Download and install Java from [https://www.java.com](https://www.java.com) if it is not already installed on your system.
 
-### 2. Install Ollama
-Follow the instructions at [Ollama's official site](https://www.ollama.ai) to install it locally.
+### 2. Install and start Ollama
+Follow the instructions at [Ollama's official site](https://www.ollama.ai) to install it locally, then make
+sure it's running:
+```bash
+ollama serve
+```
 
 ### 3. Install AI Models
 Once Ollama is installed, add the required models:
@@ -82,9 +88,16 @@ ollama pull falcon3
 ### 4. Clone the Repository
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/yourusername/aicodereviewer.git
-cd aicodereviewer
+git clone https://github.com/larrydiamond/AICodeReviewer.git
+cd AICodeReviewer
 ```
+
+### 5. Build the Project
+Build the jar with the Gradle wrapper (no local Gradle install needed):
+```bash
+./gradlew build
+```
+This produces `build/libs/dli-0.0.2-SNAPSHOT.jar`.
 
 ---
 
@@ -93,12 +106,12 @@ cd aicodereviewer
 Run the AI Code Reviewer using the following command:
 
 ```bash
-java -jar dli-0.0.2-SNAPSHOT.jar <filename_to_review>
+java -jar build/libs/dli-0.0.2-SNAPSHOT.jar <filename_to_review>
 ```
 
 Replace `<filename_to_review>` with the path to the file you want to review. For example:
 ```bash
-java -jar dli-0.0.2-SNAPSHOT.jar src/MyCodeFile.java
+java -jar build/libs/dli-0.0.2-SNAPSHOT.jar src/MyCodeFile.java
 ```
 
 ---
