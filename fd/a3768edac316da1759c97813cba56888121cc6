@@ -1,0 +1,23 @@
+README.md
+  s_bf4efe159f2552::t_32a9a168411d10 109
+  s_bf4efe159f2552::t_44d70c65b01cf0 114
+  s_bf4efe159f2552::t_d15479e52fa068 100
+build.gradle
+  s_bf4efe159f2552::t_df09a5667525ae 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fda3768edac316da1759c97813cba56888121cc6",
+  "prompts": {},
+  "sessions": {
+    "s_bf4efe159f2552": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ca803d7d-e65c-4df5-8069-1c15aa6db065",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Larry Diamond <ldiamond@ldiamond.com>"
+    }
+  }
+}
