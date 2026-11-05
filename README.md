@@ -24,6 +24,9 @@ buggy source to a local Ollama model and asserts the review flags the known bug.
 `./gradlew integrationTest` (requires Ollama running locally; excluded from the default `test` task since it
 makes live model calls).
 
+Mutation testing uses [PIT](https://pitest.org/): run `./gradlew pitest` and open
+`build/reports/pitest/index.html`. It runs the unit tests only; the Ollama integration tests are excluded.
+
 - Used the wrong collection [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Usedthewrongcollection.java)
 [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Usedthewrongcollection.output)
 - Buggy algorithm [java code](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Previousreference.java) [output](https://github.com/larrydiamond/AICodeReviewer/blob/main/src/test/resources/examples/Previousreference.output)
