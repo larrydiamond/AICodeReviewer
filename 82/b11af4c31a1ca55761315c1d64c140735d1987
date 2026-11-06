@@ -1,0 +1,20 @@
+build.gradle
+  s_2e5ffccbe59b31::t_f406186a2e199e 6,44-56
+  s_2e5ffccbe59b31::t_4a619a43922330 57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "82b11af4c31a1ca55761315c1d64c140735d1987",
+  "prompts": {},
+  "sessions": {
+    "s_2e5ffccbe59b31": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "907a21f1-47a9-4e5c-afa2-70222247b84f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Larry Diamond <ldiamond@ldiamond.com>"
+    }
+  }
+}
