@@ -1,0 +1,20 @@
+calm.json
+  s_560e557acdc6ef::t_b46025bb7f2eaf 1-8,15-16,30
+  s_560e557acdc6ef::t_f04e21a9be3bd1 9-14,17-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ed93a70351e78e15503726d1053648d2e793a0cc",
+  "prompts": {},
+  "sessions": {
+    "s_560e557acdc6ef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1c71915d-dee7-4709-a82d-96ff75ed3540",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Larry Diamond <ldiamond@ldiamond.com>"
+    }
+  }
+}
