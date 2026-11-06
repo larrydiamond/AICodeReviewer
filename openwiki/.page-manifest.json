@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/overview.md": {
+      "pageVersion": "sha256:f5d59a76bd4f657f8ed9d1a299c0c6288450f6dbcb12540313c16868cb9c475b",
+      "completedBy": "claude-code",
+      "completedRunId": "247a2591-5c8e-402e-8092-222cba173054",
+      "gitHead": "ed93a70351e78e15503726d1053648d2e793a0cc",
+      "sourceFingerprint": "sha256:a20389e2355c84bc04819cb405da15b7e432f2a84eeab213db49f67cb4b42f3a"
+    },
+    "/openwiki/integrations/ollama-llm-client.md": {
+      "pageVersion": "sha256:28f919dffcd70e8268e89b7c8999e9a6b110ae3db35a6ca37a30657988d77f2c",
+      "completedBy": "claude-code",
+      "completedRunId": "247a2591-5c8e-402e-8092-222cba173054",
+      "gitHead": "ed93a70351e78e15503726d1053648d2e793a0cc",
+      "sourceFingerprint": "sha256:a20389e2355c84bc04819cb405da15b7e432f2a84eeab213db49f67cb4b42f3a"
+    },
+    "/openwiki/operations/build-and-run.md": {
+      "pageVersion": "sha256:57f936fafb8c45554f146184ce44453c441ffde8842f500bda467f1a85409dd5",
+      "completedBy": "claude-code",
+      "completedRunId": "247a2591-5c8e-402e-8092-222cba173054",
+      "gitHead": "ed93a70351e78e15503726d1053648d2e793a0cc",
+      "sourceFingerprint": "sha256:a20389e2355c84bc04819cb405da15b7e432f2a84eeab213db49f67cb4b42f3a"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:cd1aaf318f8fe3d232ce699c72b935e423d7abc3ada8f5b7a1f2d597a7946816",
+      "completedBy": "claude-code",
+      "completedRunId": "247a2591-5c8e-402e-8092-222cba173054",
+      "gitHead": "ed93a70351e78e15503726d1053648d2e793a0cc",
+      "sourceFingerprint": "sha256:a20389e2355c84bc04819cb405da15b7e432f2a84eeab213db49f67cb4b42f3a"
+    },
+    "/openwiki/testing/test-strategy.md": {
+      "pageVersion": "sha256:eedff0e2aca7a4f31b873913a01639ba917734a379b96901bd86efcedf6dd0bb",
+      "completedBy": "claude-code",
+      "completedRunId": "247a2591-5c8e-402e-8092-222cba173054",
+      "gitHead": "ed93a70351e78e15503726d1053648d2e793a0cc",
+      "sourceFingerprint": "sha256:a20389e2355c84bc04819cb405da15b7e432f2a84eeab213db49f67cb4b42f3a"
+    },
+    "/openwiki/workflows/code-review-pipeline.md": {
+      "pageVersion": "sha256:836f5d4f0c6d41e7ed3e338d99318aa14804b6ad0b472390c3f8ef630a5019be",
+      "completedBy": "claude-code",
+      "completedRunId": "247a2591-5c8e-402e-8092-222cba173054",
+      "gitHead": "ed93a70351e78e15503726d1053648d2e793a0cc",
+      "sourceFingerprint": "sha256:a20389e2355c84bc04819cb405da15b7e432f2a84eeab213db49f67cb4b42f3a"
+    }
+  }
+}

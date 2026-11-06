@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:f5d59a76bd4f657f8ed9d1a299c0c6288450f6dbcb12540313c16868cb9c475b",
+  "claims": [
+    {
+      "id": "claim_463af49c5a2b42b59da36bab80818179",
+      "statement": "App is the sole application bean; it implements ApplicationRunner so Spring Boot invokes App.run after context startup, and it is excluded when the test profile is active via @Profile(\"!test\").",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L39-L54",
+          "version": "repo-lines-v1:sha256:7cbf3565ba294de6b2e1c785f1857e25dbc4d8a6e7af3f5713b868606a8b6ae5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2N2M3NWE2MDUwM2U4ZjVkMWRmYjQyYTkzZjgyMmEyMTJlOTM0ZjY4Y2QyZDM2MDlmZGIwMTE5MjYzYjgwMGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwNGJjNzhkMGNhMzMzMDRiMGU3NDE1YjRlYjJmYjRlZTA3OWMxZTExNzM5ODA2ODIwMzZkNzI3YzQ0MGY4MWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM1OTlhYzg5MjMxYzIzMTQyZDQzM2ZkNTk3MWY2ZmFjY2MyMTQ2ZDk0ZjA1NzQyMGQ4ZDNjMmEzNTYxMDBjYjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiNDJiN2Q5MjFhNTdkM2E5OWNkYzA5OTU0MWU2ZGFkMzRkMzQ4MjZkMjE3NmQ5MWMxZjU0ODRiZjM1MWJlZTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cc15ab9a55ad4cf6a66f2a192c9d543a",
+      "statement": "DliApplication is the Spring Boot entry point and only spring-boot-starter (no web starter) is included, so the app runs as a one-shot command-line process.",
+      "evidence": [
+        {
+          "resource": "repo://build.gradle#L27-L37",
+          "version": "repo-lines-v1:sha256:8848907e092334dee708709972f9a6b0097e4f0c6689ec53c8171afd6158ae77:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiYTMxNDVhZWUwZGEwNTkyNGQzYWQwYjFlZWI0YWRlNzc2MWI2NjdkOGE5NjE0NmRlZWYzOWFiZDFjZTQ4Y2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjZGVlOGRjNjY4MzAzMzU5Y2JhZjZiMjBkYWVhM2Y0MGQ5ZjFmMzU5NGY1Yzg0MWY4MWM4M2M0NDRlMDg4YjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdiZjA0NzI2MTVkMDE4YzRiNjQ5NTkwMDc0ZTBmYWM0ZTYyNmMyZTdjOTM0NGE5YWZiYjNkMjdhMzZlN2E3YWEifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/DliApplication.java#L6-L13",
+          "version": "repo-lines-v1:sha256:79adfcd4868d510c4821ba172b1026a7a12ebf64cd4ab22f7c8d191fa02b772e:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjFjMDQwY2VjYTE5ZGQ1NzFiODhlOWQ2MDA5YTViNTY5MzJkYWMxNTEyZDUyNDg1Y2MyYTljNDQ0MGZkOWJkMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDAxZmQ3MGZmMzdjMmM2MDMyOTQyYmI0NDM3NmUyNTcxMDI1ZGYyN2RkZmQ1YTNmNTc0ODIzMzYxOTViYzE5MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0c12afef39554d66ae2542da8642669d",
+      "statement": "The CALM model declares exactly two nodes, the AI Code Reviewer system and the local Ollama service, connected by a single HTTP relationship.",
+      "evidence": [
+        {
+          "resource": "repo://calm.json#L1-L30",
+          "version": "repo-lines-v1:sha256:a9889c5ef1f431f8219651b26a0a73c34e6a4bb27c3a74a22a76ac7b81528e16:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZmIwOGZkYTFhY2I5NTdiNjExNmJkMzc4MTFhMWZlNDFhMDE2MTFjMDYzMWVkYmY3ODZkNjg4OWEyN2E1NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c27c199a9a0743caa2311c1493298785",
+      "statement": "All model calls are made sequentially and block on CompletableFuture.join(); parallelizing them is noted as future work.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L161-L174",
+          "version": "repo-lines-v1:sha256:fda00fe05a53db61dffde7495d3b3dff5d6cfc5576a276ee2e1c4700843ea678:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmMDU0NjhlNGFiYmNiYWU4MTRjZmQxNDA4NmZlMzljZTkzNGNjZjU0YmY0MzhmY2RmNGRmZmE3MTViYTMzMWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE4M2NjNjU3M2U5MzA4ZDA1YjQ2OWY1MTA2MDljYzY5ZGRhMjAwMTUyZTBlY2RkYTkyNjQ4MmE4YTk4NzNkNGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxMjdjZWUyYWQ5ZWQ5YzQ1NjE3YTIzYWVmNGM5YWZkYmNlNGNmYjFhNTVhNmJmYzU2ZmQ1MTEyODZhNmQ5Y2QifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L91-L93",
+          "version": "repo-lines-v1:sha256:cae1b6dcf7b362297c30fc8df44bc45e00513d2984dec63622c0d26e955cc910:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzRmNzY0Y2Y0MmNiOGRkYTFkNTNjMGIzNzFjOGVlOTcwNWQyYjhkMDE3NWE1MDE3ODc5YjgzOGMyMGI3MTY2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODE0YThlMWMyMTc5NjdmODRmMzQ3ZTI3Y2VjMGQ5MTY5NzA2OWIxNTIwZGE4NTc5YmJiY2UxMGVmNmM1ZjNlNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWJlZjg2YWYxY2FlZmI2ZDIxMDBkMDY4MjhkOTg5OTc5ZGZiMGJjNTNlNTYxNWI1YTU1N2JmYTUyZDc4NWMzZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWU5M2MzZTBiZjU0Mjk3OTllZWJkOTE4MjBjYTVlOThkNjlkNmEyZWI2ZDQ3OGM4OWZjYjRjYzFjYTU3OGE4OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_55a3af0405484e109b167a7ecf62a314",
+      "statement": "The Ollama endpoint http://localhost:11434 is hardcoded in App rather than read from configuration.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L57-L62",
+          "version": "repo-lines-v1:sha256:98e35c682daec02f7814488afb161af823ffce86311b8510b250cd77047cd410:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzhlY2EzYzZiYTg3N2I4ZGM3N2ZjNjdlZWFmMWY4ZGQ2ODc5YzQ5ZDgwM2I3YmQyMDRiODU3MDA3MjRkM2MxMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQ0YWNhNWEzNTg4ODQ1YzU1YzY0YjZmZTU1MWQ1NjkyMjk3ZjZiMGFmY2QxOTU3MTAzMTFjYzliMDRkYTcwZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmFmYjA4NjA5NTJjMTBmZTVjNDkzYTRlOGY5NTc0ODk1NmVjMDkzNDdhOTE4OGI5MTA0NmI4ODM1YjFkMDJlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWZlNjc4ZGYzYWMzN2NmMTViODNmZDBkODg2MTVjMjYxNDMwZDJjMmNhZjAzMmIyYTY5ZGRmNWIxNDM0ODBmOSJ9"
+        },
+        {
+          "resource": "repo://src/main/resources/application.properties",
+          "version": "repo-file-v1:sha256:7d06fdd9d966bdf304a9b365ece0b083102c653db460089412ba40bb1fd3e1ff"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.8.0",
+    "at": "2026-11-06T02:25:40.585Z"
+  }
+}

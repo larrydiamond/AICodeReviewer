@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:cd1aaf318f8fe3d232ce699c72b935e423d7abc3ada8f5b7a1f2d597a7946816",
+  "claims": [
+    {
+      "id": "claim_dcf59a89adaf4998bd8469c2b7212450",
+      "statement": "Nearly all application logic, including the Ollama client, review pipeline and helper utilities, lives in the single App ApplicationRunner class.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L39-L159",
+          "version": "repo-lines-v1:sha256:79dd60cc97908edc46327cb45cbf492061ffd4c8c2d03611fa6e806f7dbe94f4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJkNjdjNzVhNjA1MDNlOGY1ZDFkZmI0MmE5M2Y4MjJhMjEyZTkzNGY2OGNkMmQzNjA5ZmRiMDExOTI2M2I4MDBhIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0ODkzZjQwZTM3ODFlYjg5NmM4MmQwNDZhMDgwNjdhMTFlMzVjZGYyZjFkZmFmMjZmZWE5MGI4ZGI2Njc2NDEzIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIzNTk5YWM4OTIzMWMyMzE0MmQ0MzNmZDU5NzFmNmZhY2NjMjE0NmQ5NGYwNTc0MjBkOGQzYzJhMzU2MTAwY2I1IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJhNjhlMDM3YmYzNTU3NGFiMmM5MmNhN2MwMDQ5NzJkZmRiYTQ4NWY2YWM4YzYwMjA1MjljZWI0YzUyMjc5NmY5In0"
+        },
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/DliApplication.java",
+          "version": "repo-file-v1:sha256:e4b97257d17aa200a053d6a5f9fd7296e7418664911c8f83419d671ff330c82e"
+        }
+      ]
+    },
+    {
+      "id": "claim_2d9cfebbf83b4bf495a4a360707fe450",
+      "statement": "Running the reviewer requires a local Ollama with gemma2, llama3.1, llama3.2, qwen2.5-coder and falcon3, and the jar takes the file to review as its argument.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L41-L111",
+          "version": "repo-lines-v1:sha256:c43ccbcea6c131e2e8d84408a2578cc18104b9a1494db77e17c67ffece132069:eyJzZWxlY3RlZExpbmVDb3VudCI6NzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4NDE2ZjE4NjNjZTUyOTBmMGY0MWZhNTMzZmI5ZTEwZmVmNWQ0MDVjMTMwMGMwM2UyNzZhMGE4OTQzODJiNjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwMWYyZWMxNzU5M2MxMDU0ZWI0NjM2N2Q4NDUzZWYyNGExNzNjZTk2YjcxMTdkOTFmOWE2OGQ0NGZlZjhiMDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwMWYyZWMxNzU5M2MxMDU0ZWI0NjM2N2Q4NDUzZWYyNGExNzNjZTk2YjcxMTdkOTFmOWE2OGQ0NGZlZjhiMDEifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L43-L102",
+          "version": "repo-lines-v1:sha256:98d2431181df7de60753cd6e24d2c9efea420543096197a804d8a1a46fbc7945:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViNjk3ODdkYzBiMDA5M2E5OWVmNWVkZDY1MDhkOTc0ZWYwZThlOTZmM2QwZTc5NzA2MjUyMmYwMWM2NzBhN2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwM2E2OTNiMDAzYjkyNmI1MDZjMjE1MjEwMzkyYzk0OWU3ZDIzZmJlYzRiOWJhMGU4MzViNjUwNmY1OTEyMjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEzZTJkZTEwYjdlNjJkNzdkOTZjN2IyMGFiZGY5YjE0ZmE4OTkzOWQ3NmE5OWFjNDg1NTc2ZDNlZjAwZjMyNTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFmYTE1ZTgwMjliYzAxNDY5NTU2NGE2N2E5MGNjMzNiZjJlMjYyZGUxNWZiNDY5M2NjZDk0YjgxNzZiMDMwMDMifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.8.0",
+    "at": "2026-11-06T02:25:40.585Z"
+  }
+}

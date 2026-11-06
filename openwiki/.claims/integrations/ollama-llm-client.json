@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:28f919dffcd70e8268e89b7c8999e9a6b110ae3db35a6ca37a30657988d77f2c",
+  "claims": [
+    {
+      "id": "claim_fc0d2a04e5cc4dfea4b59757d5a8f2ea",
+      "statement": "The SimpleOpenAI client targets Ollama at http://localhost:11434 with placeholder \"ollama\" API key, organization and project values.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L57-L62",
+          "version": "repo-lines-v1:sha256:98e35c682daec02f7814488afb161af823ffce86311b8510b250cd77047cd410:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzhlY2EzYzZiYTg3N2I4ZGM3N2ZjNjdlZWFmMWY4ZGQ2ODc5YzQ5ZDgwM2I3YmQyMDRiODU3MDA3MjRkM2MxMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQ0YWNhNWEzNTg4ODQ1YzU1YzY0YjZmZTU1MWQ1NjkyMjk3ZjZiMGFmY2QxOTU3MTAzMTFjYzliMDRkYTcwZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmFmYjA4NjA5NTJjMTBmZTVjNDkzYTRlOGY5NTc0ODk1NmVjMDkzNDdhOTE4OGI5MTA0NmI4ODM1YjFkMDJlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWZlNjc4ZGYzYWMzN2NmMTViODNmZDBkODg2MTVjMjYxNDMwZDJjMmNhZjAzMmIyYTY5ZGRmNWIxNDM0ODBmOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_819065c5b09d4e2e82ebbd86bd38e656",
+      "statement": "Every chat helper sends requests with temperature 0.0 and maxCompletionTokens -1, blocks on join(), and returns the first content of the response.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L161-L266",
+          "version": "repo-lines-v1:sha256:e5c6f4c0fb1987eecaaf8c26e75df3a0fc1595437abdfa8a8d6315b576a24d94:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA2LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4ZjA1NDY4ZTRhYmJjYmFlODE0Y2ZkMTQwODZmZTM5Y2U5MzRjY2Y1NGJmNDM4ZmNkZjRkZmZhNzE1YmEzMzFkIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0ODkzZjQwZTM3ODFlYjg5NmM4MmQwNDZhMDgwNjdhMTFlMzVjZGYyZjFkZmFmMjZmZWE5MGI4ZGI2Njc2NDEzIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJhODNjYzY1NzNlOTMwOGQwNWI0NjlmNTEwNjA5Y2M2OWRkYTIwMDE1MmUwZWNkZGE5MjY0ODJhOGE5ODczZDRhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJjM2FhMTg0MmVlZTJjNTg5OGMwODgwZTRkY2E1YzkyMjQ0OWVlNGI3ZDUwNjlmMmE3OWI1OTlmYmJlOGQwMjZmIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_9b1ea9924aca4bda8fd8051ef2115db9",
+      "statement": "userMessageOnly and systemUserMessage do not catch exceptions, while the image and text-attachment helpers catch Exception, log at SEVERE and return an empty string.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L161-L266",
+          "version": "repo-lines-v1:sha256:e5c6f4c0fb1987eecaaf8c26e75df3a0fc1595437abdfa8a8d6315b576a24d94:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA2LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4ZjA1NDY4ZTRhYmJjYmFlODE0Y2ZkMTQwODZmZTM5Y2U5MzRjY2Y1NGJmNDM4ZmNkZjRkZmZhNzE1YmEzMzFkIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0ODkzZjQwZTM3ODFlYjg5NmM4MmQwNDZhMDgwNjdhMTFlMzVjZGYyZjFkZmFmMjZmZWE5MGI4ZGI2Njc2NDEzIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJhODNjYzY1NzNlOTMwOGQwNWI0NjlmNTEwNjA5Y2M2OWRkYTIwMDE1MmUwZWNkZGE5MjY0ODJhOGE5ODczZDRhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJjM2FhMTg0MmVlZTJjNTg5OGMwODgwZTRkY2E1YzkyMjQ0OWVlNGI3ZDUwNjlmMmE3OWI1OTlmYmJlOGQwMjZmIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_63866eb677a84a72adcca7762633aef0",
+      "statement": "The model catalog uses gemma2, llama3.1 and llama3.2 as text models and qwen2.5-coder, falcon3 and gemma2 as coding reviewers, with deepseek-r1 defined but commented out of the reviewer list.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L43-L51",
+          "version": "repo-lines-v1:sha256:db7008fe5e7a6f3ab7421e3a761ff633ce089e03d96eff82cd334e50f980b6ad:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI2OTc4N2RjMGIwMDkzYTk5ZWY1ZWRkNjUwOGQ5NzRlZjBlOGU5NmYzZDBlNzk3MDYyNTIyZjAxYzY3MGE3ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDZjMTZhZDNmNTFlNjU3YjcwZTU2MmM5MzNjY2QxNzM3MjhlM2MyYjc1MzQ2ODFiZjE2ZTFjNmNmMTc2NjI1OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTNlMmRlMTBiN2U2MmQ3N2Q5NmM3YjIwYWJkZjliMTRmYTg5OTM5ZDc2YTk5YWM0ODU1NzZkM2VmMDBmMzI1MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWYwYjEyZTVkZTgxOGIzN2JmM2I4YmUzOWVkZjk3ZWY1NzA4ZWE3ZTczY2JkYjkzNjRhNjQ0ZWNmNjBlZjc4OSJ9"
+        },
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L65-L68",
+          "version": "repo-lines-v1:sha256:5902b3c39048d58e42388204751e5560a1219c12bc7e4fc06c80b40c956d6f46:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDc3NjczYzg4NWY3OTI2NDYyZTdhN2MwNjM4OTkzYzQwYTVmMDQyYjA4NTczODIzMjM5OTM5OTQ1OGY4MTliYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjAyN2NmZWVmYjI0ZDA5NWExMTgxYzhiMDQ1MmQ2ZjY2OTA2MWVlMGE2ZDYzOTRkMTQxNzQ5ZTUyMDU4NmQ3MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTllOTRjNzE0YWRiNjBiMGFlNDUyMTlkYmFjZjNlM2I3ZjE5ODc0NWUwYzFhODk1ZjQwNjE1OTg4NDRjMTg2OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTc4MWE1MjgxYTQ0NzllNGU4MTM3YjU5MzBkN2EzZDQ5YTIxYTBiNjM2YzhkZGQ3OGI3MmFhYTU4MWE3NTk1MCJ9"
+        },
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L96-L100",
+          "version": "repo-lines-v1:sha256:97f9efe8487e3419c05ce4ec2a91565f2dd20f05f619ca20aa332858f5cb08fa:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjc1ZWMzOWMzM2MwOGY1MjhhOWNjZmY3NjU1N2UxNjE0OTNiZWY5MTIxZDBkMTYyZTU4MGZiZmJkYzZhMzlkOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2E5NzA5ZDVjZjU3ODNmYjVkMTRlNmZmNTNmNTM4YjFiYzljZjBjYmQ5OGMwMzk2NzI2NjAwMTk1Y2M2ZTk2NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmEyNzBhN2EyNTg5YTIzMmFmYmNiMzU5M2FlNzc3YjI4N2VhNTcwODExMjZiNDM0MmZlYzkyNGI2ZmI4YzE4ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWZmODZiYmZiMTFkZjUwZWNjODQwOTQ3OTdmOGVjNDM4NmU1NmE2NjljYWFhYTg3ZDNjNTMyNGRmZmJmZWZmNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f69195c1f68c4974af3f421d129aadbf",
+      "statement": "readDirectoryTreeToString walks directories breadth-first but ignores its extension parameter, filtering only .java files, and joins lines with an empty separator.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L288-L316",
+          "version": "repo-lines-v1:sha256:1e2f456d0cdc7fe5617ca20b6175fae6fc3f74fac90731c6a9d1bdb54b70aa32:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwODIzYzViOWY0ZmE2YjdmYmY5OTFiYWExZDlkYjgxYWY1NDRkMTg0NjY4ZGRjOTlhNWU4Y2QwNDNiYTFlYzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5OWJkZWZlZWFjYTYzNDBlMDI5MGRjODZlODg5Yzg5ZDVlMTg5YWE1YmE0NGI1ODViM2I3MDczNGY0YTYyZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkwNzlhM2NlMmI5Y2YyMzU3OTU2MmQwOGI0NTVlNWIzMjU1YmZmMmE5NTQ0M2RiZGE2M2Y0MWQ3ZmFlOGNjOGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0838069b87aa461aaad9297a5be55845",
+      "statement": "PDF text and HTML extraction helpers use PDFBox and return an empty string on IOException; none of the PDF, image, attachment or directory helpers are invoked by run().",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L268-L286",
+          "version": "repo-lines-v1:sha256:63087ec4377fe1306d8c332099cf584f9d97bb9f6a78ff8133b98a4e38248e73:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlYTJiY2ViMzE4YTE4MzNkZmU5NmQyNjExMDMzYWU0MzQyYTkyNjU3ODhmNzgyYmE3ODMxNDIxZWQyZGJhNTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5OWJkZWZlZWFjYTYzNDBlMDI5MGRjODZlODg5Yzg5ZDVlMTg5YWE1YmE0NGI1ODViM2I3MDczNGY0YTYyZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVmYmUzYWFmZWY2NWM4OWZiNTE1MmEwYWUxZGJmODYzZmYwMWQ3NzFmOTNiNWNkZjBiMTE2NWY2MTZjZTRlMWEifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L53-L159",
+          "version": "repo-lines-v1:sha256:2bafb19af67ad330e82db2c4cd90f05362912634acbd7c75087cf4acafa7fc7a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJlZGMyYjMxMWFiZTg3NTcyZThhN2NjMGQ5OTZhNjU4NDQwNzZlNTIzMmQyMWI3YTg1NDc1ZjliNDA1NWI3NDkyIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0ODkzZjQwZTM3ODFlYjg5NmM4MmQwNDZhMDgwNjdhMTFlMzVjZGYyZjFkZmFmMjZmZWE5MGI4ZGI2Njc2NDEzIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJmYTBhYjk1MTRmYzk0NDIzZmE1MTY5ZWFhMjAzMTczY2Q1OWE5MDhlNjM5OWIyMjY2ZTlkMjNjNDA2OTcwZmEzIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJhNjhlMDM3YmYzNTU3NGFiMmM5MmNhN2MwMDQ5NzJkZmRiYTQ4NWY2YWM4YzYwMjA1MjljZWI0YzUyMjc5NmY5In0"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.8.0",
+    "at": "2026-11-06T02:25:40.585Z"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:57f936fafb8c45554f146184ce44453c441ffde8842f500bda467f1a85409dd5",
+  "claims": [
+    {
+      "id": "claim_363f3c5fd1754b5c8f4b2c115697676a",
+      "statement": "The build uses a Java 17 toolchain, auto-provisionable through the foojay toolchain resolver, and produces the dli 0.1.0 Spring Boot jar.",
+      "evidence": [
+        {
+          "resource": "repo://build.gradle#L1-L15",
+          "version": "repo-lines-v1:sha256:bf71938cb7019073bc61984855b04b2224411961341c06e5f15b60bdc1a258f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MDQwMTAzMTViZGJiMGZlYTBmZDZmZjAyMTRkOGJjOTIxY2UyODM2ZDFjYzZiY2I4ODQ5ZjM1NzZjZjVhNjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc2NWMyNzg4MzUzYzY1MjQ0MzlmMzY5YmU1NTZiMDgyNzI1ODBjODk3ZGY4MzcwM2MwZmI1YjMyZjU0OWFmNDYifQ"
+        },
+        {
+          "resource": "repo://settings.gradle",
+          "version": "repo-file-v1:sha256:49130873a734379b1b96e7304ec1d3e1c5054288ca4aa14be6a2c11f0f5221ac"
+        }
+      ]
+    },
+    {
+      "id": "claim_32d4ce5c08fd484bb34abb7373025aeb",
+      "statement": "The default test task excludes integration-tagged tests, while a separate integrationTest task runs only them and is ordered after test.",
+      "evidence": [
+        {
+          "resource": "repo://build.gradle#L39-L52",
+          "version": "repo-lines-v1:sha256:0f15ade32e10dad9e27697606784bac42799ddfcdbed8013ff280714239a2e73:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4ZGNlZDA5MTA0NTU0ZGU3NzQ4OTcxZDBhY2IxZTE5Mjc0Mjc3ZThkZjVhNmNjODczYmM4NmJjMzU4MjI2YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkM2RjNTg1ZTM4NzIyMmI1MTc4NTE1Y2I3ZTg0N2UwMzVhZWFkMzRmMGM5NjQ1YWE0MWViOTYzY2MzZWRmYTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc2MjFkYWYyZTNjOGFiNTA0ZmVlZTQ2ZjI2NjkyMGVlZjlhNzZjNDIyYWE4Mzk5Y2NhODkwZDlhMmU5ZTdkOTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7dee1618548a45b2a4c6d0299bc74c73",
+      "statement": "spring-boot-starter-logging is excluded from all configurations, and App logs via Lombok @Log (java.util.logging).",
+      "evidence": [
+        {
+          "resource": "repo://build.gradle#L54-L56",
+          "version": "repo-lines-v1:sha256:49497a68b9565efd9e20cdce2c2f759fd40b11f53181f8161b712f82c2979613:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODMxNGZhMWM2YzIxNjk0ZmM1ZGY4YzQ4NzU4NzkyZGM4ZjljYmZhNDkwZTAzMWVkZGJhMWQ3ODBhY2NhOTYyYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2MzOGRkZDlkYzk4NjQzNmVmMDU4YmFlNDJlMWM3YTBjNmYxOTZhNDZjZmE3ODc0YzFmNTg1NmI0MmYwZDExMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWUyYjJmODBkMzRlYzc0MGM0MjRhZmI4ODk2ZGY0YTNkY2RmODY3NDBhNWIwY2M4Y2Q0MmU0MDUzM2U4NDdhNSJ9"
+        },
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L34-L42",
+          "version": "repo-lines-v1:sha256:aa6d5c6b59b8541689fda5f214cc82da4a8a9a9861958c4feceb06e8434aec52:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTI4NmM3YWE0ZDhjYmVlMjIzNDYwOWE1ZDM3Y2EzODViOWE1NWZjZjlmMjcyYTUzYjNlNjI0N2JkYTY1MjNhMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTA1NWU5MTUzODk4MTIwYjhiZGUzNjQ0MDEzM2RhZTY3NzVmYWE4NjZiYzc5ZDQ4MGMzNWNjNWIzNWRhOGM4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDk5MGY0M2JlMjU0OTcwMmQwMGEyZmNhN2E1NWM5Yjc0YTcwMmQ1YWMwN2YxYWQwZjM4OTY2ODUwMzE1MWUzMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjk0MTUyNDdlZjViMjEwZTlkM2E4OTk3OGViOWMwNzhmYjFmZWJlZTE2M2NmZTI3Njg5Njk0MWQwY2I0MGIyNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_25c09ee634e0493f8393e1cb34bf978d",
+      "statement": "The file to review is the first non-option command-line argument; a non-regular-file path logs 'Not a file', and the classifier vote runs before the file check.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L155-L157",
+          "version": "repo-lines-v1:sha256:1637fedbe97f47630c9a421024834c537fe9dce074730195f53fdc53d659b20c:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODY5ODI1MTc5MjRmZThkM2UxNTY2NzExNWIxZjVhMjAxOGUwZDU1Y2U1YTAwMWIxZTJkNWUzMWI4YjI0MTIyYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTZiMDQ0OTE0Njk3MjJlODM2M2E5NGU0MDQ0NTM4ZTAxM2EyYTIxN2UzNmIxZTU2OGJhNjBhY2I3YjRjOGYyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTc2MWJmNGJlMWIxZmM5Mzk0MTJkN2I2OGFjZWRmZTI2M2MxY2JjMjIyMzEyMTJkZjM5MDljNzIyOWNkMTZlYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTgzY2M2NTczZTkzMDhkMDViNDY5ZjUxMDYwOWNjNjlkZGEyMDAxNTJlMGVjZGRhOTI2NDgyYThhOTg3M2Q0YSJ9"
+        },
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L70-L104",
+          "version": "repo-lines-v1:sha256:5f915e37f6983b9ae6e13b60a536ab764937a7e4db7b2efd70a68676ffd8a916:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0NzNiNmQzNjFkNGZhNjMxZDNmMDIxNjI2NzM5MDhkZTZkMWUyMzJhNDMyMjA2Yzk0MThkMGM4ZjZmZGUxMTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwZmE2NTg4MTc5MzNjMmIxNzNiZWIyYzE0NDI2NmFiZWMxYzQ4MGI1NTdiZjEzMWVkZDg0ZmJkODkwYWNhODgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQzZWM2Njg2Y2I0OGEyMGFjNTNmMGFhZDk0MjUyMWM5NGEyMTUwZDRjMTJmM2M2NjBmMGU2YjVlYzZiNDU3ZTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRjYjdhODFmNzgzM2NmMjczNWQ3MmYyOWY2YjU1NzgwOGYwYWY2ZDc4M2QzNDM1YjI4MTBlNTQ3MDA5NTE3NWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5a1250116ebd410d976c256cb1911ad3",
+      "statement": "application.properties only sets the application name; endpoint, models and prompts are not externally configurable.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L43-L62",
+          "version": "repo-lines-v1:sha256:990db15664487b2a669da20b9c364eea80dc719a03499a526f920c228fbcbb3b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViNjk3ODdkYzBiMDA5M2E5OWVmNWVkZDY1MDhkOTc0ZWYwZThlOTZmM2QwZTc5NzA2MjUyMmYwMWM2NzBhN2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkNGFjYTVhMzU4ODg0NWM1NWM2NGI2ZmU1NTFkNTY5MjI5N2Y2YjBhZmNkMTk1NzEwMzExY2M5YjA0ZGE3MGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEzZTJkZTEwYjdlNjJkNzdkOTZjN2IyMGFiZGY5YjE0ZmE4OTkzOWQ3NmE5OWFjNDg1NTc2ZDNlZjAwZjMyNTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFmZTY3OGRmM2FjMzdjZjE1YjgzZmQwZDg4NjE1YzI2MTQzMGQyYzJjYWYwMzJiMmE2OWRkZjViMTQzNDgwZjkifQ"
+        },
+        {
+          "resource": "repo://src/main/resources/application.properties",
+          "version": "repo-file-v1:sha256:7d06fdd9d966bdf304a9b365ece0b083102c653db460089412ba40bb1fd3e1ff"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.8.0",
+    "at": "2026-11-06T02:25:40.585Z"
+  }
+}

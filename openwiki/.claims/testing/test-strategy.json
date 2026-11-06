@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:eedff0e2aca7a4f31b873913a01639ba917734a379b96901bd86efcedf6dd0bb",
+  "claims": [
+    {
+      "id": "claim_91cb423dffb84fe39a6376473fa668d0",
+      "statement": "DliApplicationTests loads the Spring context under the test profile, which excludes the App runner, so it requires neither a file argument nor Ollama.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L39-L42",
+          "version": "repo-lines-v1:sha256:97ab874cbbcb4d2f9c20a9efe6e744057e05ced309688cbdf772a22dd0b0768d:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDY3Yzc1YTYwNTAzZThmNWQxZGZiNDJhOTNmODIyYTIxMmU5MzRmNjhjZDJkMzYwOWZkYjAxMTkyNjNiODAwYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTA1NWU5MTUzODk4MTIwYjhiZGUzNjQ0MDEzM2RhZTY3NzVmYWE4NjZiYzc5ZDQ4MGMzNWNjNWIzNWRhOGM4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzU5OWFjODkyMzFjMjMxNDJkNDMzZmQ1OTcxZjZmYWNjYzIxNDZkOTRmMDU3NDIwZDhkM2MyYTM1NjEwMGNiNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjk0MTUyNDdlZjViMjEwZTlkM2E4OTk3OGViOWMwNzhmYjFmZWJlZTE2M2NmZTI3Njg5Njk0MWQwY2I0MGIyNiJ9"
+        },
+        {
+          "resource": "repo://src/test/java/com/ldiamond/dli/DliApplicationTests.java#L7-L15",
+          "version": "repo-lines-v1:sha256:5e0534cdbdc586f11e0439390bc392fb14174efc4f15ea9ab37837b289563bb4:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDk4YWZmNGU2MjAxYTA3OTRjZmI2ZWMyMWM2ZGEwMzk3ZmQwZmNjMjlkZjk0Y2JlYzI0NTMxNWFkNzBkZjRiOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzUzMzMyMDBhYzA0MzI3MDZhYTc4N2M1MjYzZDI2YzU5MTE4NjJiOGE3MzFjY2RkOTJjZmZkNWZlM2RhMWYyMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6c7b1f97ec644b80b6e860206cf6ca21",
+      "statement": "CodeReviewExamplesIT is tagged integration, has a 120-second timeout, and sends each fixture to the ornith-1.5:9b model with the same prompts as App, temperature 0.0 and max_tokens 2000.",
+      "evidence": [
+        {
+          "resource": "repo://src/test/java/com/ldiamond/dli/examples/CodeReviewExamplesIT.java#L27-L36",
+          "version": "repo-lines-v1:sha256:1742c887a5fc1461338fdd58be9272dc4f1f18041809357a79b3409f41d18a5b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1M2NkZTYzY2E3M2YyZWZkZjk3ZWJmYmI5NmM1YjA4YTJlMjk5ZTg3MDBkNTY5MjJmZDI5OTMyOTdiYmNjYjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5MWIwZWIxOWExZDIxZWUzNDI3MTU3OWM1OGZiYThhZWViODllMjVkZmZkMjc4MTY5MjA4YjU3ZWZhZDFmYTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5ZjIzNDhmNDNkMGQ4MTE5ZGRlOTExYTQ2ZjUyYTczMTc2ZDEzZDY5NmJhZjdjZDE3YjE2ZTY4MTg4MmVmMzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI5ZjI0OTY2OTRjZGY2ZDg1NDM2NmUwOGFjMzMwOWQ5ZWE0ZDYxYWI1ZjFlNjgwZmZhOWZhNWU5MjhhZDk0OTYifQ"
+        },
+        {
+          "resource": "repo://src/test/java/com/ldiamond/dli/examples/CodeReviewExamplesIT.java#L83-L91",
+          "version": "repo-lines-v1:sha256:4f27806e2020d37f5f08a18c0933894bbeb1341ccd592314c89aa45a7df9132f:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTkyMjg3NDhhNjQ1MzEzNjcxZGMwYTZhZDZmMmNhODlhNmEwZjgwNWQwYjBhYTYwYmEyNWQwNjAwYmVmZmIyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGNmNDYyMTRkOGMzNGE3ZjEzZGQyMWIwZTY3ZDZkNWY0ZWQ4ZGMwMmQ3NjgyZmE2MjBmNGUzY2U3MDY2MWU5YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzI0NWI2MzhhNzE5YmQ0OGU5ZWUzYzNlOWJjMzU3M2M0YjAwYjhjMzI3Mjk5MDkwYjRlZTgxZGNiMjhhYWIxNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzYwZjk4OTgyOTY1NDRkMjY0MmE3YjJmOWVkODBkMThhNTFlZjNkMDQxMjU1NDUxYTE5ZTAyZmRlYzhjODZhMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d841fb57231d4487ba4a459a4dbc7790",
+      "statement": "The integration test calls Ollama's /v1/chat/completions directly over HttpClient instead of simple-openai so that the reasoning field is captured, and asserts on reasoning plus content.",
+      "evidence": [
+        {
+          "resource": "repo://src/test/java/com/ldiamond/dli/examples/CodeReviewExamplesIT.java#L23-L26",
+          "version": "repo-lines-v1:sha256:a23ada970ba2d5669a857b056f8cb264d0eb96df3236d71a38cb902ded60f2ff:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2RlMmQ3MzUxNzM1NjczNmJmMzA1NTcyYzgxZTFjNGRkMTg4ZDUxZjJjNzMwYzdmMjdhMjVhYTYwM2FjMTM5MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGYzMzAyZTcyNjNiMGZhNGU5NzI0ZjZlMjUxNmVjMDA0NWRhOTkyZjZiNzA3MGY4YWY3NzRjZjAwZjIxNGQzYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjkzYWFmOWVjM2E5NTFhZWI3MjBlNmQ2NmFmMTkzNGY4OGRjNzQxNjA1Y2IzZTJhZDkzNDZjOWYwYzE4OWNiNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWUwY2VkNjUyNDA5Mzk0Y2I0MmFlYzcyNzY1OTg2ZDZmZWI2MTQxZWNmNjNmZDdiOGM4NDUzYzBjYTQyYWUxNiJ9"
+        },
+        {
+          "resource": "repo://src/test/java/com/ldiamond/dli/examples/CodeReviewExamplesIT.java#L93-L102",
+          "version": "repo-lines-v1:sha256:925ca0a9ea0940b293ab618dbd4d9a453926e4d88a08a20750c15ef49187d69d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJmYzRlMDA5M2E2OWNkNDRkNTY5NGNmNWZmZDdhNTQ4OWQ0ODk0OTBhYWJlNjEwOTIwYTUwMzk0MWUzODRlYWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRkMDYzMzdiNDZkOTA0NzRkNzEwODNmZDMzYjA4NWUwYjU5M2Q4NjJhYmJmNjljYTllNGQ4NmFlNjVlZjU3MzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBkMGI2NzBiMWRiMWFiYjVmNzFiMjBmNzhmNDFkOGZjNWNkNDJiMzdkMmY2NTkzMGMzNzI0ZWEwYmUwYzUwNjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5059c5e54b6549d6bcd3c2f354ea7282",
+      "statement": "Each example test asserts the lowercased review does not start with 'no problem' and contains a bug-specific keyword (constructor, pi, stringbuilder, index, hashmap).",
+      "evidence": [
+        {
+          "resource": "repo://src/test/java/com/ldiamond/dli/examples/CodeReviewExamplesIT.java#L41-L81",
+          "version": "repo-lines-v1:sha256:fae829bc8ac8edea5144cd8af508bf0999bb6b287cecad3eb4ee216b7e3ffe68:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjZjA5ZWIwYzU3NDRmYjk3MzMxYjk4ZmYzZmJmMDVhNjAyYmEzZjdmNjdlNWRhNWJlOTA5NTAzM2Y2MjU4MjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0MDg5ODE3ODAzZDk5NjdjMzlkZGIxMDg5MDExNzYzYWZhNTI1NWY5NGNlZDk0M2JiNzZkZjE1MDEzNWQwZWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNhNzIxNzM2YjcxODg5MTlmODQ5OTEyYWQwNmE1MzE2ZjFkYWY5MDlhMTU3YmUyZDgyYzI3MTI4MTljOTJhMDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3e9bbf89487e410ca632c4fdd9b19fea",
+      "statement": "PIT mutation testing targets com.ldiamond.dli.* and excludes *IT classes and the integration group.",
+      "evidence": [
+        {
+          "resource": "repo://build.gradle#L58-L68",
+          "version": "repo-lines-v1:sha256:306fcf83aa3b14706dc40aa0a043662ee3b63e96b1431d30542c122e059486ff:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYWJmNWQxOThjMmE4ODg3Njg4YzYwNGU0NzAzODg3ZTNmZTU2YmEwZjk2YzY3ZjI1NmU0ZjIyODlmMWI5ZmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2Y2FjNDBjNTBiMDhjZjc5YTBhN2Q5NGNjNzdmMTJmZTA3NjM3OWM0YzQxM2RkNGI5MWU0NThkMzcwNDM3YjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2ff535a183024585bf9361d41b2ed28e",
+      "statement": "The .output files beside each example fixture are recorded logs of full App runs showing the judge's choice and best response; tests do not read them.",
+      "evidence": [
+        {
+          "resource": "repo://src/test/java/com/ldiamond/dli/examples/CodeReviewExamplesIT.java#L104-L111",
+          "version": "repo-lines-v1:sha256:7544024d25dc9dcee857c24faae6695ecdb5533447a089415d584441979e1c1b:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGRiZDRhMzIyYWU1MjM4NzBjNTllZWQ5ZWZmNjNjYmFmNWU4ODllMDU1MzdiMDE2ZTlhMGI0ODNhMTQ3MzlmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODQ3MDk3YTQ0MzA1NDVlOGJkNTE3ZjU0NGIzNTU0ODNjM2Q2YmViYzExMjZmNDc4YTk5MjNmNDEyYWEyM2IyNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSJ9"
+        },
+        {
+          "resource": "repo://src/test/resources/examples/BookStoreProduct.output",
+          "version": "repo-file-v1:sha256:37a391b698c3ca61f3e8a87f0b0c8bd8a048b3ae2299fff95b60eb6ea2cddf41"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.8.0",
+    "at": "2026-11-06T02:25:40.585Z"
+  }
+}

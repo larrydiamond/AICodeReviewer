@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:836f5d4f0c6d41e7ed3e338d99318aa14804b6ad0b472390c3f8ef630a5019be",
+  "claims": [
+    {
+      "id": "claim_e68c131284dd402b81484740db23b11d",
+      "statement": "Before reviewing, run() asks gemma2, llama3.1 and llama3.2 a fixed one-word classification question and logs the most common answer as a majority-vote hallucination check unrelated to the review.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L65-L94",
+          "version": "repo-lines-v1:sha256:b90eeb84438bb1b56be72622e03c0e314b3b81e11351fb94ab30a57b5c3a81be:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3NzY3M2M4ODVmNzkyNjQ2MmU3YTdjMDYzODk5M2M0MGE1ZjA0MmIwODU3MzgyMzIzOTkzOTk0NThmODE5YmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5YTA1MmQ2MjUxMDMwMTRlMjcxZjcyZjBmOThkNDlkYWZlZjQ0NjY4ZGM1MTc4OTViNDAyYWVmMjM0ZjUyYzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU5ZTk0YzcxNGFkYjYwYjBhZTQ1MjE5ZGJhY2YzZTNiN2YxOTg3NDVlMGMxYTg5NWY0MDYxNTk4ODQ0YzE4NjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4ODNhNTFhY2NkMDNjYmVkZWZjMmQzMGYwOGQ3MzVhZjFmZmYwYzFjOGJkNTA4ZjRlMzllMjg2Yjg2MTlhNGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2ffb7ab0fd264d88bbf045ce9014a227",
+      "statement": "The target file is reviewed by qwen2.5-coder, falcon3 and gemma2 using a fixed system prompt and a rewrite-request prefix prepended to the file contents.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L96-L112",
+          "version": "repo-lines-v1:sha256:80e525ef0bff99fcd3b0988d3ab1bebb5b434286340c7c99db98c06d39269de0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3NWVjMzljMzNjMDhmNTI4YTljY2ZmNzY1NTdlMTYxNDkzYmVmOTEyMWQwZDE2MmU1ODBmYmZiZGM2YTM5ZDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlNDFiYTUyZDhhZmFkNGE1MGNmNzU2N2Q4YTk0N2IzYzIyYmVlNDVjODQwMjIwNTk1MmZkOTZkYTMxYzE5NmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhMjcwYTdhMjU4OWEyMzJhZmJjYjM1OTNhZTc3N2IyODdlYTU3MDgxMTI2YjQzNDJmZWM5MjRiNmZiOGMxOGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllMDc3ZTE5YWM3MGZkZjBkNzNhNmM4NmU0M2VhMzM0NWY5YWVlOTJlYTlmYzY4MTJkMjM4NGQ0ZDU4ZDdlMjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_43e9131b652d47c4b78036d0d76b6c9f",
+      "statement": "A reviewer response is kept only if it is non-null, longer than 20 characters, and does not start with the case-sensitive prefix \"No problem\".",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L113-L116",
+          "version": "repo-lines-v1:sha256:555e0cca3a2163957ab5ef9ade77c5cafa2955076accc33a2e3aa209a3c631b8:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGY0ZWY3NGEyMWRhOTM1M2IxMzM1ZjMzZWU1MDJhNjNiOWM1MDE2OWEzOTdjYTRhMjA3MjMzMmYyMWMwZjg5OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGM2NDc5Y2MyMzA0NDBmZDQxZTgyMjQyMTg2Nzk2OTg1NTlkMjg5M2JkNjdiNDM4MGFmYWI4MTFiMzhhNTVhYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2E0MzhlMGVkYTZlN2FlNmNiN2FjMjViYmNlNDYyODJjNDYxZmQyZDMyZTg2MmJhM2VhZDEwN2VjOTBlM2M1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGM2ZWZjYzU1YzM4OTI2YzRhY2E3ZWNiNTA5NTc2MzNlMzdmZjRkNTY5MzlkMTY5Yzg1NTRhMTU2ZmJjNzNlNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bf11c978387e4959a2496c2103ab11e4",
+      "statement": "With two or more kept responses, gemma2 acts as judge over all choices; with exactly one the response is logged directly; with none the run logs 'no coding recommendations'.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L119-L153",
+          "version": "repo-lines-v1:sha256:a8d9bf935cf09a3227a00a1b639e944db6c712e81d54634a46611479e1f28848:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiNTg5YjY3YjFlY2YxMDBmNjZmY2IwMGQ3YjQ1ZjM4MTgyZDg1YmQ5ZmIyNjg0MmI3NmNhZTJjY2MxZjMwZmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MjJjNDJjZDE5YzZkMDNkODA4YzQ1MjcyMDU1MjgyNWI3ZWExYzViNDkxYjIxODUxMWNhYzc0MTVjZjlkOWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE3NjFiZjRiZTFiMWZjOTM5NDEyZDdiNjhhY2VkZmUyNjNjMWNiYzIyMjMxMjEyZGYzOTA5YzcyMjljZDE2ZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM1M2U0MmFiNmE1YzY5NDhkNDAyZDNhY2EzNzg4ZGE3ODAzZDM5NDExODcwZTk4OGY1NWU5NzNhOGFkMTg5MjAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_44e8e8b7ffac4ac89d82e0f4034570fc",
+      "statement": "If the judge's reply is not exactly a model name, the model whose name appears earliest in the reply is chosen, defaulting to the first map key when no name appears.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/ldiamond/dli/App.java#L130-L146",
+          "version": "repo-lines-v1:sha256:cf4a2e2e9b4228d2e1a80129252778a225334e38ecf03db37f9f8bc9151f18d4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5NzliY2I1NzQwNWZmYjdjM2ZlOWQwMzg1MjVkMGI2ZjEzYzM5MzM4ZGUzMDlhODQwMjcwM2EzMzVkNGViZGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjNjQ3OWNjMjMwNDQwZmQ0MWU4MjI0MjE4Njc5Njk4NTU5ZDI4OTNiZDY3YjQzODBhZmFiODExYjM4YTU1YWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkwNTRhZTE5MDc1OTUzMTM1N2Q0ZDJiMDNiZWQxYTNkODNkMTliZDBhYjRiZjMxNTIzOTZiMzhhYTQzZWJlMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkMGJjZjMyNDdlNTZmY2I2MDBkMGY1Zjg0NzlmZWFhYzZmNGIxNWVhMDBjMjU5YmNhMTc1YjI2ZjkxM2VlNzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_090fc7b8999e4d6185c8037b89922560",
+      "statement": "In practice the judge answers in prose naming the winner (e.g. 'The best choice is **qwen2.5-coder**'), so selection relies on the substring fallback.",
+      "evidence": [
+        {
+          "resource": "repo://src/test/resources/examples/BookStoreProduct.output",
+          "version": "repo-file-v1:sha256:37a391b698c3ca61f3e8a87f0b0c8bd8a048b3ae2299fff95b60eb6ea2cddf41"
+        },
+        {
+          "resource": "repo://src/test/resources/examples/Circumference.output",
+          "version": "repo-file-v1:sha256:a8c0411c5e25775376415be7ddd1af3fdda0d434d67fa0c266d41f1cf0299412"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.8.0",
+    "at": "2026-11-06T02:25:40.585Z"
+  }
+}
