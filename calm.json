@@ -1,0 +1,30 @@
+{
+  "$schema": "https://calm.finos.org/release/1.3/meta/calm.json",
+  "nodes": [
+    {
+      "unique-id": "ai-code-reviewer",
+      "node-type": "system",
+      "name": "AI Code Reviewer",
+      "description": "Spring Boot command-line application that sends source code files to locally hosted Ollama models and returns actionable feedback on bugs, performance and security problems."
+    },
+    {
+      "unique-id": "ollama-server",
+      "node-type": "service",
+      "name": "Ollama",
+      "description": "Locally running Ollama server at http://localhost:11434 hosting the gemma2, llama3.1, llama3.2, qwen2.5-coder and falcon3 models used to generate code reviews."
+    }
+  ],
+  "relationships": [
+    {
+      "unique-id": "ai-code-reviewer-to-ollama",
+      "description": "AI Code Reviewer submits source code for review to the Ollama OpenAI-compatible API.",
+      "relationship-type": {
+        "connects": {
+          "source": { "node": "ai-code-reviewer" },
+          "destination": { "node": "ollama-server" }
+        }
+      },
+      "protocol": "HTTP"
+    }
+  ]
+}
