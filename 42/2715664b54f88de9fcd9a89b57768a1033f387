@@ -1,0 +1,59 @@
+openwiki/testing/test-strategy.md
+  s_f5fcba0056c615::t_6baf581928336f 1-72
+openwiki/workflows/code-review-pipeline.md
+  s_f5fcba0056c615::t_cd7165dcbc63af 1-78
+openwiki/quickstart.md
+  s_f5fcba0056c615::t_7be1ec6ed74802 1-52
+openwiki/architecture/overview.md
+  s_f5fcba0056c615::t_27c6de972cd0c2 1-60
+openwiki/integrations/ollama-llm-client.md
+  s_f5fcba0056c615::t_e570439ef7cb72 1-67
+openwiki/operations/build-and-run.md
+  s_f5fcba0056c615::t_998330d862cf51 1-68
+AGENTS.md
+  s_f5fcba0056c615::t_e3a7ce9670350a 1-16
+openwiki/.claims/architecture/overview.json
+  s_f5fcba0056c615::t_728c3fbc0c808b 1-72
+openwiki/.claims/integrations/ollama-llm-client.json
+  s_f5fcba0056c615::t_e9c247611d6f34 1-82
+openwiki/.claims/operations/build-and-run.json
+  s_f5fcba0056c615::t_7ec23077e62653 1-76
+openwiki/.claims/quickstart.json
+  s_f5fcba0056c615::t_dc3616a1230557 1-38
+openwiki/.claims/testing/test-strategy.json
+  s_f5fcba0056c615::t_222b60d315bca1 1-86
+openwiki/.claims/workflows/code-review-pipeline.json
+  s_f5fcba0056c615::t_d2b90ab89e7cfd 1-74
+openwiki/.last-update.json
+  s_f5fcba0056c615::t_836cea72086137 1-8
+openwiki/.page-manifest.json
+  s_f5fcba0056c615::t_4155d9c518199c 1-47
+openwiki/architecture/index.md
+  s_f5fcba0056c615::t_95b701e06e10c2 1-3
+openwiki/index.md
+  s_f5fcba0056c615::t_f350710500b52c 1-15
+openwiki/integrations/index.md
+  s_f5fcba0056c615::t_6a0d3066f26444 1-3
+openwiki/operations/index.md
+  s_f5fcba0056c615::t_5441fac92ddd5e 1-3
+openwiki/testing/index.md
+  s_f5fcba0056c615::t_103c92673fb90f 1-3
+openwiki/workflows/index.md
+  s_f5fcba0056c615::t_c9e4d318dbb8ae 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "422715664b54f88de9fcd9a89b57768a1033f387",
+  "prompts": {},
+  "sessions": {
+    "s_f5fcba0056c615": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "02f23d8d-78ae-40d8-884f-9fd668711aca",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Larry Diamond <ldiamond@ldiamond.com>"
+    }
+  }
+}
